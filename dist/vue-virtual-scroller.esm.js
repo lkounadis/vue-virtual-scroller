@@ -233,10 +233,14 @@ var script$2 = {
         key,
         type
       };
-      Object.defineProperty(view, 'nr', {
-        configurable: false,
-        value: nonReactive
-      });
+      // Object.defineProperty(view, 'nr', {
+      //   configurable: false,
+      //   value: nonReactive,
+      // })
+
+      view.nr = {
+        ...nonReactive
+      };
       pool.push(view);
       return view;
     },
